@@ -8,9 +8,7 @@ import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import App from './components/App';
-import SongList from './components/SongList';
-import SongCreate from './components/SongCreate';
-import SongDetail from './components/SongDetail';
+
 
 // 2. Create the HttpLink that will connect your ApolloClient instance with the GraphQL API
 const httpLink = new HttpLink({ uri: 'http://localhost:8964/graphql' })
@@ -23,17 +21,12 @@ const client = new ApolloClient({
 
 const Root = () => {
   return (
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <App>
-          <Switch>
-            <Route path="/" component={SongList} />
-            <Route path="songs/new" component={SongCreate} />
-            <Route path="songs/:id" component={SongDetail} />
-          </Switch>
-        </App>
-      </BrowserRouter>
-    </ApolloProvider>
+    <BrowserRouter>
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
+    </BrowserRouter>
+
   );
 };
 
