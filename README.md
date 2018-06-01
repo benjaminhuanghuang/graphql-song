@@ -1,3 +1,6 @@
+# GraphQL study project
+    Using MongoDB + Node.js + Express + GraphQL at server side.
+    Client side using React + Apollo + React Router
 
 
 ## References
