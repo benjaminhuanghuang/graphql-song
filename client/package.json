@@ -18,7 +18,7 @@
         "react-router-dom": "^4.2.2",
         "redux": "^4.0.0",
         "react-redux": "^5.0.7",
-        "apollo-client": "^2.3.2",
+        "apollo-client-preset": "^1.0.8",
         "react-apollo": "^0.9.0",
         "graphql-tag": "^2.9.2",
         "graphql": "^0.13.2",
