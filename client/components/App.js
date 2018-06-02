@@ -9,9 +9,9 @@ export default () => {
   return (
     <div className="container">
       <Switch>
-        <Route path="/" component={SongList} />
-        <Route path="songs/new" component={SongCreate} />
-        <Route path="songs/:id" component={SongDetail} />
+        <Route exact path="/" component={SongList} />
+        <Route path="/songs/new" component={SongCreate} />
+        <Route path="/songs/:id" component={SongDetail} />
       </Switch>
     </div>);
 };
