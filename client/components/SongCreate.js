@@ -46,3 +46,18 @@ const mutation = gql`
 `;
 
 export default graphql(mutation)(SongCreate);
+
+
+/*
+mutation AddSong($title: String){
+  addSong(title: $title){
+    id
+    title
+  }
+}
+
+// Query variables
+{
+  "title": "Sprite vs Coke"
+}
+*/
