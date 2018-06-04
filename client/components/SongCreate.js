@@ -16,7 +16,7 @@ class SongCreate extends Component {
 
     this.props.mutate({
       variables: { title: this.state.title },
-      refetchQueries: [{ query }]
+      refetchQueries: [{ query }]    // Refresh method 1
     }).then(() => this.props.history.push('/'));
   }
 

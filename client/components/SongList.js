@@ -8,7 +8,7 @@ import query from '../queries/fetchSongs';
 class SongList extends Component {
   onSongDelete(id) {
     this.props.mutate({ variables: { id } })
-      .then(() => this.props.data.refetch());
+      .then(() => this.props.data.refetch());   // Refresh method 2
   }
 
   renderSongs() {
@@ -60,3 +60,15 @@ export default graphql(mutation)(
   graphql(query)(SongList)
 );
 
+/*
+mutation DeleteSong($id: ID) {
+  deleteSong(id: $id) {
+    id
+  }
+}
+
+
+{
+  "id": "abc"
+}
+*/
